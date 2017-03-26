@@ -112,6 +112,9 @@ public class SavingsMakeTransferFragment extends BaseFragment implements
             accountId = getArguments().getLong(Constants.ACCOUNT_ID);
             transferType = getArguments().getString(Constants.TRANSFER_TYPE);
         }
+        /* Validator built using a third party library
+        Saripaar for asynchronous validation as well.
+         */
         validator=setValidator();
     }
 
@@ -126,6 +129,8 @@ public class SavingsMakeTransferFragment extends BaseFragment implements
 
         showUserInterface();
         savingsMakeTransferPresenter.loanAccountTransferTemplate();
+
+
 
         return rootView;
     }
